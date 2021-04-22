@@ -7,40 +7,40 @@ namespace FollowUpThenAPI
     public class FollowUp
     {
         [JsonProperty("id")]
-        public long Id { get; set; }
+        public long Id { get; private set; }
 
         [JsonProperty("hash")]
-        public string Hash { get; set; }
+        public string Hash { get; private set; }
 
         [JsonProperty("trigger_url")]
-        public string TriggerUrl { get; set; }
+        public string TriggerUrl { get; private set; }
 
         [JsonProperty("created")]
         [JsonConverter(typeof(UnixDateTimeConverter))]
-        public DateTime CreatedUTC { get; set; }
+        public DateTime CreatedUTC { get; private set; }
 
         [JsonProperty("invisible")]
-        public bool Invisible { get; set; }
+        public bool Invisible { get; private set; } //Todo: read-only?
 
         [JsonProperty("trigger_time")]
         [JsonConverter(typeof(UnixDateTimeConverter))]
-        public DateTime? TriggerTimeUTC { get; set; }
+        public DateTime? TriggerTimeUTC { get; private set; }
 
         [JsonProperty("trigger_timeformat")]
-        public string TriggerTimeFormat { get; set; }
+        public string TriggerTimeFormat { get; private set; } //Todo:read-only and the Reschedule method should be used?
 
         [JsonProperty("completed")]
-        public bool Completed { get; set; }
+        public bool Completed { get; private set; }
 
         [JsonProperty("completed_on")]
         [JsonConverter(typeof(UnixDateTimeConverter))]
-        public DateTime? CompletedOnUtc { get; set; }
+        public DateTime? CompletedOnUtc { get; private set; }
 
         [JsonProperty("reference_email")]
-        public FollowUpMail ReferenceEmail { get; set; }
+        public FollowUpMail ReferenceEmail { get; private set; }
 
         [JsonProperty("command")]
-        public string Command { get; set; }
+        public string Command { get; private set; } //Todo: read-only and have the Reschedule method used?
         //public object Relationships { get; set; } //Todo
 
         public FollowUp Complete(/*Todo: parameters?*/) //Todo: is Archive different?
