@@ -37,10 +37,50 @@ namespace FollowUpThenAPI
         public DateTime? CompletedOnUtc { get; set; }
 
         [JsonProperty("reference_email")]
-        public FollowUpMail ReferenceEmail { get; set; } //Todo
+        public FollowUpMail ReferenceEmail { get; set; }
 
         [JsonProperty("command")]
         public string Command { get; set; }
         //public object Relationships { get; set; } //Todo
+
+        public FollowUp Complete(/*Todo: parameters?*/) //Todo: is Archive different?
+        {
+            throw new NotImplementedException(); //Todo
+        }
+
+        public void /*Todo: check return type*/ FollowUpNow(/*Todo: parameters?*/)
+        {
+            throw new NotImplementedException(); //Todo
+        }
+
+        public void /*Todo: check return type*/ Reschedule(/*Todo: parameters?*/)
+        {
+            throw new NotImplementedException(); //Todo
+        }
+
+        public void /*Todo: check return type*/ Delete(/*Todo: parameters?*/)
+        {
+            throw new NotImplementedException(); //Todo
+        }
+
+        public void /*Todo: check return type*/ ChangeDeliveryAddress(/*Todo: parameters?*/)
+        {
+            throw new NotImplementedException(); //Todo
+        }
+
+        public void /*Todo: check return type*/ Download(/*Todo: parameters?*/)
+        {
+            throw new NotImplementedException(); //Todo
+        }
+
+        public void /*Todo: check return type*/ AddAttachment(/*Todo: parameters?*/)
+        {
+            throw new NotImplementedException(); //Todo
+        }
+
+        public void /*Todo: check return type*/ GetHistory(/*Todo: parameters?*/)
+        {
+            throw new NotImplementedException(); //Todo
+        }
     }
 }
