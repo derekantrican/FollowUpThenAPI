@@ -4,7 +4,7 @@
 ## Usage:
 
 ```csharp
-FollowUpThenClient client = new FollowUpThenClient("EMAIL", "TOKEN"); //See below for getting your token
+FollowUpThenClient client = new FollowUpThenClient("TOKEN"); //See below for getting your token
 client.CreateFollowUp("4pm", "This is a test subject");
 ```
 
