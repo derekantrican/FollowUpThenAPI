@@ -5,11 +5,8 @@ namespace FollowUpThenAPI
 {
     public class FollowUpThenClient
     {
-        private readonly string email;
-
-        public FollowUpThenClient(string email, string token)
+        public FollowUpThenClient(string token)
         {
-            this.email = email;
             Requests.Token = token;
         }
 
@@ -39,10 +36,11 @@ namespace FollowUpThenAPI
         /// Creates a followup
         /// </summary>
         /// <param name="command">The time-formatted string (eg "4pm") for when the followup should occur</param>
+        /// <param name="fromEmail">The address that the followup should reply to</param>
         /// <param name="subject">The subject of the followup</param>
         /// <param name="body">The body of the followup</param>
         /// <returns>The created FollowUp</returns>
-        public FollowUp CreateFollowUp(string command, string subject, string body = "" /*Todo: also include people*/)
+        public FollowUp CreateFollowUp(string command, string fromEmail, string subject, string body = "" /*Todo: also include people?*/)
         {
             command = command.EndsWith("@followupthen.com") || command.EndsWith("@fut.io") ? command : $"{command}@followupthen.com";
             JObject result = Requests.Post("tasks", new JObject(new JProperty("webhook", true),
@@ -50,7 +48,7 @@ namespace FollowUpThenAPI
                                                                     new JProperty("command", command),
                                                                     new JProperty("reference_email", JObject.FromObject(new Mail
                                                                     {
-                                                                        From = email,
+                                                                        From = fromEmail,
                                                                         To = new List<string>
                                                                         {
                                                                             command
