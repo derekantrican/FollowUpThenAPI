@@ -8,6 +8,9 @@ FollowUpThenClient client = new FollowUpThenClient("TOKEN"); //See below for get
 client.CreateFollowUp("4pm", "This is a test subject");
 ```
 
+_(More examples can be seen in the Demo project)_
+
+
 ## Getting your token:
 
 1. Log in to https://app.followupthen.com
