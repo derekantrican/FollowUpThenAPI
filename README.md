@@ -1,5 +1,9 @@
 # FollowUpThenAPI
 
+This is a C# API for the website FollowUpThen.com. FollowUpThen allows you to schedule email-based reminders by forwarding an email to a time-formatted address (eg "nov21st@fut.io"). The email will then be returned to you at that time (as a reply from FollowUpThen).
+
+This API allows you to list, create, delete, reschedule, etc your FollowUps programmatically in C#. For a JavaScript API, check out https://github.com/mailbots/mailbots-sdk-js
+
 
 ## Usage:
 
